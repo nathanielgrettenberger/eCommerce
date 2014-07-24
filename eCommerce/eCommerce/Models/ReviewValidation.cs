@@ -20,10 +20,11 @@ namespace eCommerce.Models
         public string Username { get; set; }
        [Required, MaxLength(50)]
         public string Title { get; set; }
-        
+        [Required,MaxLength(500)]
         public string Body { get; set; }
         public double Rating { get; set; }
         public System.DateTime DateCreated { get; set; }
         public int ProductID { get; set; }
     }
+        
 }

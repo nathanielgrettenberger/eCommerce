@@ -9,7 +9,7 @@ using eCommerce.Models;
 
 namespace eCommerce.Controllers
 {
-    public class Default1Controller : Controller
+    public class ProductController : Controller
     {
         private eCommerceEntities db = new eCommerceEntities();
 
