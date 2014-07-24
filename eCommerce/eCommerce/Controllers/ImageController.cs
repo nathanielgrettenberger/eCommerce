@@ -27,7 +27,7 @@ namespace eCommerce.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Image image = db.Images.Find(id);
+            Models.Image image = db.Images.Find(id);
             if (image == null)
             {
                 return HttpNotFound();
@@ -49,7 +49,7 @@ namespace eCommerce.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Image image)
+        public ActionResult Create(Models.Image image)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace eCommerce.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Image image = db.Images.Find(id);
+          Models.Image image = db.Images.Find(id);
             if (image == null)
             {
                 return HttpNotFound();
@@ -81,7 +81,7 @@ namespace eCommerce.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Image image)
+        public ActionResult Edit(Models.Image image)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace eCommerce.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Image image = db.Images.Find(id);
+            Models.Image image = db.Images.Find(id);
             if (image == null)
             {
                 return HttpNotFound();
@@ -113,7 +113,7 @@ namespace eCommerce.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Image image = db.Images.Find(id);
+           Models.Image image = db.Images.Find(id);
             db.Images.Remove(image);
             db.SaveChanges();
             return RedirectToAction("Index");

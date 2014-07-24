@@ -27,7 +27,7 @@ namespace eCommerce.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Review review = db.Reviews.Find(id);
+            Models.Review review = db.Reviews.Find(id);
             if (review == null)
             {
                 return HttpNotFound();
@@ -49,7 +49,7 @@ namespace eCommerce.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Review review)
+        public ActionResult Create(Models.Review review)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace eCommerce.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Review review = db.Reviews.Find(id);
+            Models.Review review = db.Reviews.Find(id);
             if (review == null)
             {
                 return HttpNotFound();
@@ -81,7 +81,7 @@ namespace eCommerce.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Review review)
+        public ActionResult Edit(Models.Review review)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace eCommerce.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Review review = db.Reviews.Find(id);
+            Models.Review review = db.Reviews.Find(id);
             if (review == null)
             {
                 return HttpNotFound();
@@ -113,7 +113,7 @@ namespace eCommerce.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Review review = db.Reviews.Find(id);
+           Models.Review review = db.Reviews.Find(id);
             db.Reviews.Remove(review);
             db.SaveChanges();
             return RedirectToAction("Index");
