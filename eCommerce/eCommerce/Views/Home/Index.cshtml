@@ -15,7 +15,10 @@
         </div>
     </section>
 }
+<div class="h3t">
 <h3>We suggest the following:</h3>
+
+</div>
 @foreach (var product in Model)
 {
     <div class="product">
@@ -30,7 +33,7 @@
              @product.Name
             </a>
            <br />
-            was @product.ListPrice.ToString("c") NOW $@product.UnitPrice.ToString("c") <br />
+            WAS @product.ListPrice.ToString("c") NOW $@product.UnitPrice.ToString("c") <br />
             With the savings of @((product.ListPrice - product.UnitPrice).ToString("c"))
         </div>
     </div> 

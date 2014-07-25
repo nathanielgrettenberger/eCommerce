@@ -99,9 +99,11 @@ h5, h6 {
 }
 
 #body {
-    background-color: #efeeef;
+    background-color:darkgoldenrod;
     clear: both;
     padding-bottom: 35px;
+    color:white;
+    font-size: 20px;
 }
 
     .main-content {
@@ -116,11 +118,12 @@ h5, h6 {
 
 header .content-wrapper {
     padding-top: 20px; 
+    background-color:darkgoldenrod;
 }
 
 footer {
     clear: both;
-    background-color: #e2e2e2;
+    background-image:url(http://xn--80aqafcrtq.cc/img/4/7/8/Elegant%20background,%20middle,%20earth,%20%D0%BA%D0%B0%D1%80%D1%82%D0%B0,%201920x1200.jpg)
     font-size: .8em;
     height: 100px;
 }
@@ -211,7 +214,7 @@ ul#menu {
 ----------------------------------------------------------*/
 /* featured */
 .featured {
-    background-color: #fff;
+    background-color:darkgoldenrod;
 }
 
     .featured .content-wrapper {
@@ -779,4 +782,7 @@ tr.pager td {
 
 .name{
     font-size:20px;
+}
+.h3t{
+color:white;
 }
