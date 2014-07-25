@@ -1,0 +1,39 @@
+﻿@model IEnumerable<eCommerce.Models.Product>
+@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Featured Items.</h1>
+                <h2>These Prices Will Blow Your Mind</h2>
+            </hgroup>
+            <p>
+        Welcome to The Best Book Store on the Net!!
+            </p>
+        </div>
+    </section>
+}
+<h3>We suggest the following:</h3>
+@foreach (var product in Model)
+{
+    <div class="product">
+        <div>
+            @if (product.Images.Any())
+            {
+            <img class="productimg" src="@product.Images.First().ImageURL" />
+            }
+        </div>
+        <div>
+            <a href="@Url.Action("ByProduct","Shop",new {id=product.ProductID})">
+             @product.Name
+            </a>
+           <br />
+            was @product.ListPrice.ToString("c") NOW $@product.UnitPrice.ToString("c") <br />
+            With the savings of @((product.ListPrice - product.UnitPrice).ToString("c"))
+        </div>
+    </div> 
+
+}
+

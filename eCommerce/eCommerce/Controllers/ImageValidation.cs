@@ -14,7 +14,7 @@ namespace eCommerce.Controllers
     {
         public int ImageID { get; set; }
         public int ProductID { get; set; }
-        [Required]
+
         public string ImageURL { get; set; }
         [Required, MaxLength()]
         public string Description { get; set; }

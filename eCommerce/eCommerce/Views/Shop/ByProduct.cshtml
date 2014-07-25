@@ -1,0 +1,104 @@
+﻿@model eCommerce.Models.Product
+
+@{
+    ViewBag.Title = "ByProduct";
+}
+
+<h2>Product Information</h2>
+<div class="conimg">
+    <div>
+        <img class="productimg" src="@Model.Images.First().ImageURL" />
+    </div>
+    <div>
+        @foreach (var image in Model.Images)
+        {
+            <div class="thumbnails">
+              <img  src="@image.ImageURL" /> 
+            </div>
+      
+        }
+
+    </div>
+     <div class="cartform">
+    <fieldset>
+        <label>Enter the Amount Wanted</label>
+        <input type="text" />
+       </fieldset>
+        <div>
+            <p>
+                     <input type="submit" value="Add to Cart" />
+            </p>
+     </div>
+    </div>
+    </div>
+
+    
+    
+<fieldset>
+    <legend>Product</legend>
+    <div class=" infoset">
+        
+    <div class="display-label name">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+        <div
+    <div class="display-label name">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label name">
+         @Html.DisplayNameFor(model => model.ListPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ListPrice)
+    </div>
+    
+   
+     <div class="display-label name">
+         @Html.DisplayNameFor(model => model.UnitPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnitPrice)
+    </div>
+
+   
+     <div class="display-label name">
+         @Html.DisplayNameFor(model => model.Supplier)
+    </div>
+    <div class="display-field">
+       @Model.Supplier.Name
+    </div>
+
+   
+     <div class="display-label name">
+         @Html.DisplayNameFor(model => model.InStock)
+    </div> 
+           
+   
+    
+     <div class="display-field">
+        @Html.DisplayFor(model => model.InStock)
+    </div>
+
+    
+    
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category)
+    </div>
+    <div class="display-field">
+        @Model.Category.Name
+    </div>
+    </div>
+    
+   </fieldset>
+   
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -133,6 +133,7 @@ footer {
     font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
     font-size: 2.3em;
     margin: 0;
+    text-align:center;
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
@@ -140,6 +141,7 @@ footer {
     color: #c8c8c8;
     outline: none;
     text-decoration: none;
+    text-align:center;
 }
 
 
@@ -326,6 +328,7 @@ aside {
 
 .label {
     font-weight: 700;
+    font-size:50px;
 }
 
 /* login page */
@@ -632,9 +635,9 @@ tr.pager td {
             padding: 0;
         }
 
-        #login a:hover {
-            color: #333;
-        }
+            #login a:hover {
+                color: #333;
+            }
 
     /* menu */
     nav {
@@ -699,12 +702,12 @@ tr.pager td {
                 background: none;
             }
 
-     /* features */
-     section.feature {
+    /* features */
+    section.feature {
         float: none;
         padding: 10px;
         width: auto;
-     }
+    }
 
         section.feature img {
             color: #999;
@@ -753,4 +756,27 @@ tr.pager td {
         footer p {
             margin: 0;
         }
+}
+
+.productimg{
+    max-width: 300px;
+}
+.thumbnails img {
+    width:30px;
+   
+}
+.thumbnails {
+     display:inline-block;
+     
+}
+.conimg{
+    float:right;
+}
+.infoset{
+    font-size:18px;
+}
+
+
+.name{
+    font-size:20px;
 }
