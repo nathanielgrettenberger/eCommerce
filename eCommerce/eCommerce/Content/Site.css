@@ -786,3 +786,6 @@ tr.pager td {
 .h3t{
 color:white;
 }
+.thumbnails img.active{
+    border: 1px solid;
+}

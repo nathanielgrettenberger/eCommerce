@@ -5,11 +5,11 @@
 }
 
 <h2>Product Information</h2>
-<div class="conimg">
+<div class="">
     <div>
         <img class="productimg" src="@Model.Images.First().ImageURL" />
     </div>
-    <div>
+    <div class ="thumbnails">
         @foreach (var image in Model.Images)
         {
             <div class="thumbnails">
@@ -20,15 +20,26 @@
 
             </div>
             <div class="cartform">
-    <fieldset>
-             <label>Enter the Amount Wanted</label>
-             <input type="text" />
-      </fieldset>
+      @using (Html.BeginForm("Add","Cart", FormMethod.Post))
+      {
+    <select id="Quanity" name="Qty">
+
+          @for (int i = 1; i <= 20; i++)
+          {
+              <option>@i</option> 
+          
+          }
+              </select>
+        <input type="submit" name="Save" />
+   
         <div>
             <p>
                      <input type="submit" value="Add to Cart" />
             </p>
      </div>
+          @Html.Hidden("ProductID", Model.ProductID)
+          @Html.Hidden("UnitPrice", Model.UnitPrice)
+                }
     </div>
     </div>
 

@@ -1,6 +1,13 @@
 ﻿@model eCommerce.Models.Order
 <div id="menu">
-    < form action = "@Url.Action" Method="Post">
-    <input type="text" name="Qty" />
-    </form>
+
+</div>
+<a href="@Url.Action("Index", "Cart")"></a>
+<div class="cart-number">
+    @Model.OrderLines.Sum(x=> x.Qty)
+
+</div>
+<div calss="cart-price">
+
+@Model.OrderLines.Sum(x=> x.Qty * x.UnitPrice).ToString("c")
 </div>
