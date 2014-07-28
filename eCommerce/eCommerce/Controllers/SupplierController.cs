@@ -6,10 +6,9 @@ using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 namespace eCommerce.Controllers
 {
-    public class SupplierController : Controller
-    {
-        Models.eCommerceEntities db = new Models.eCommerceEntities();
-        //
+     [Authorize(Roles = "admin")]
+    public class SupplierController : BaseController
+    { 
         // GET: /Supplier/
 
         public ActionResult Index()

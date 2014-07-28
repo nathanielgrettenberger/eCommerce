@@ -7,11 +7,11 @@ using System.Web.Mvc;
 
 namespace eCommerce.Controllers
 {
-    public class ShopController : Controller
+    public class ShopController : BaseController
     {
         //
         // GET: /Shop/
-         Models.eCommerceEntities db = new Models.eCommerceEntities();
+        
 
         public ActionResult Index()
         {

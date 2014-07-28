@@ -18,12 +18,48 @@
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
+                    <div id="menu">
+                    @*displays the user caart*@
+                    @Html.Action("MiniCart","Cart")
+
+                    </div>
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
+                        @if (Request.IsAuthenticated && User.IsInRole("admin"))
+                        {
+                            <ul id="menu">
+                                <li>
+                                    <a href ="@Url.Action("Index", "Product")">
+                                         Products
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href ="@Url.Action("Index", "Category")">
+                                        Category
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href ="@Url.Action("Index", "Review")">
+                                     Review
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href ="@Url.Action("Index", "Image")">
+                                   Image
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href ="@Url.Action("Index", "Suppliers")">
+                                        Supplier
+                                    </a>
+                                </li>
+                            </ul> 
+                        
+                        }
                     </nav>
                 </div>
             </div>
